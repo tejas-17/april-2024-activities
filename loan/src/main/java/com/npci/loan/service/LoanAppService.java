@@ -1,11 +1,8 @@
+
 package com.npci.loan.service;
 
-import com.npci.loan.bean.Customer;
+import com.npci.loan.bean.LoanAppTable;
 
 public interface LoanAppService {
-	
-	
-	public LoanAppService store(LoanAppService loanAppService);
-
-
+    LoanAppTable store(LoanAppTable loanAppTable);
 }

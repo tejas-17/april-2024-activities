@@ -19,16 +19,17 @@ import java.util.Optional;
 @Service
 public class LoanServiceImpl implements LoanService {
 
+	
+	@Autowired
     private LoanDao loanDao;
     
-    private LoanAppDao appdao;
 
     
     @Autowired
     private CustomerDao customerDao;
 
  
-    @Autowired
+  
     public LoanServiceImpl(LoanDao loanDao) {
         this.loanDao = loanDao;
     }
@@ -61,18 +62,9 @@ public class LoanServiceImpl implements LoanService {
         return loanDao.save(loan);
     }
 
-	@Override
-	public Loan applyForLoan(Map<String, Object> requestBody) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
-	@Override
-	public Object applyForLoan(Map<String, Object> requestBody, String customerEmail) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 	
 	 public Long getCustomerIdByEmailId(String emailId) {
 	        return customerDao.findCustomerIdByEmailId(emailId);
@@ -80,27 +72,10 @@ public class LoanServiceImpl implements LoanService {
 
 
 	 
-	  @Override
-	    public Object loanApply(Map<String, Object> requestBody) {
-		  System.out.print("333333333333333"+requestBody);
-		  String emailId=(String)requestBody.get("emailId");
-		  Long customerId = getCustomerIdByEmailId(emailId);
-		  System.out.print("########################"+customerId);
-		  
-		  requestBody.put("customerId", customerId);
-		  
-		  System.out.println("");
-
-		  System.out.println("########################"+requestBody);
-		  
-		  
+	 
 
 		  
-		  
-		  return "";
-	  }
-
-
+	
 //@Override
 //public Object loanApply(Map<String, Object> requestBody) {
 //    System.out.println("Request Body: " + requestBody);

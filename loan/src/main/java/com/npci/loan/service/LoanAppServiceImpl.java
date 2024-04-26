@@ -1,10 +1,19 @@
-//package com.npci.loan.service;
-//
-//public class LoanAppServiceImpl implements LoanAppService{
-//
-//	@Override
-//	public LoanAppService store(LoanAppService loanAppService) {
-//		// TODO Auto-generated method stub
-//	}
-//
-//}
+package com.npci.loan.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.npci.loan.bean.LoanAppTable;
+import com.npci.loan.dao.LoanAppDao;
+
+@Service
+public class LoanAppServiceImpl implements LoanAppService {
+
+    @Autowired
+    private LoanAppDao loanAppDao;
+
+    @Override
+    public LoanAppTable store(LoanAppTable loanAppTable) {
+        return loanAppDao.save(loanAppTable);
+    }
+}

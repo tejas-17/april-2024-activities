@@ -9,9 +9,8 @@ import com.npci.loan.bean.Loan;
 import com.npci.loan.bean.LoanAppTable;
 import com.npci.loan.service.LoanAppService;
 
-public interface LoanAppDao extends JpaRepository<Loan, Integer> {
+public interface LoanAppDao extends JpaRepository<LoanAppTable, Integer> {
 
-	LoanAppService save(LoanAppTable loanAppTable); 
 
 
 	
