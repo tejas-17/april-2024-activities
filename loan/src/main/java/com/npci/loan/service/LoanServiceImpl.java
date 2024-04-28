@@ -69,6 +69,14 @@ public class LoanServiceImpl implements LoanService {
 	 public Long getCustomerIdByEmailId(String emailId) {
 	        return customerDao.findCustomerIdByEmailId(emailId);
 	    }
+	 
+	 
+	 
+	 
+	  public Loan findByLoanId(Long loanId) {
+	        // Retrieve the Loan object from the database using Spring Data JPA repository
+	        return loanDao.findByLoanId(loanId);
+	    }
 
 
 	 

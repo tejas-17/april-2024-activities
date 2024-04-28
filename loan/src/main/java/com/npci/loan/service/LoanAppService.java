@@ -5,4 +5,6 @@ import com.npci.loan.bean.LoanAppTable;
 
 public interface LoanAppService {
     LoanAppTable store(LoanAppTable loanAppTable);
+    
+    LoanAppTable getLoanAppinfo(String emailId);
 }

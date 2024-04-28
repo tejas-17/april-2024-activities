@@ -16,4 +16,9 @@ public interface LoanService {
 
 
 
+	Loan findByLoanId(Long loanId);
+
+
+
+
 }

@@ -13,7 +13,7 @@ import com.npci.loan.bean.Loan;
 import com.npci.loan.bean.LoanAppTable;
 import com.npci.loan.service.LoanAppService;
 import com.npci.loan.service.LoanService;
-
+ 
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/loan")

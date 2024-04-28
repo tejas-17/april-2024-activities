@@ -16,4 +16,9 @@ public class LoanAppServiceImpl implements LoanAppService {
     public LoanAppTable store(LoanAppTable loanAppTable) {
         return loanAppDao.save(loanAppTable);
     }
+
+	@Override
+	public LoanAppTable getLoanAppinfo(String emailId) {
+		return loanAppDao.getApplicationData(emailId);
+	}
 }
