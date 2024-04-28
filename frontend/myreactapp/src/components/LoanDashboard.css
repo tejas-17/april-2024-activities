@@ -1,0 +1,26 @@
+.loan-dashboard {
+    margin: 20px;
+}
+
+.loan-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.loan-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.loan-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.loan-card.selected {
+    background-color: #007bff;
+    color: #fff;
+}
